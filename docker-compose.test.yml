@@ -1,17 +1,17 @@
 version: "3.3"
 
 services:
-  aidextrading_bot_landing_page:
+  ui:
     build:
       context: ./
       dockerfile: Dockerfile
     restart: always
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.aidextrading.rule=Host(`aidextrading.bot`)"
+      - "traefik.http.routers.aidextrading.rule=Host(`test-landing.aidextrading.bot`)"
       - "traefik.http.routers.aidextrading.entrypoints=websecure"
       - "traefik.http.routers.aidextrading.tls.certresolver=lets-encrypt"
-      - "traefik.http.services.aidextrading.loadbalancer.server.port=80"
+      - "traefik.http.services.aidextrading.loadbalancer.server.port=3000"
     networks:
       - traefik_test_general
 

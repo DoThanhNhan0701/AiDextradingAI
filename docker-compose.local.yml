@@ -1,7 +1,7 @@
 version: "3.3"
 
 services:
-  aidextrading_bot_landing_page:
+  ui:
     build:
       context: ./
       dockerfile: Dockerfile
