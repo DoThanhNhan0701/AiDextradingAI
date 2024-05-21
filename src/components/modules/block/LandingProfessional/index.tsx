@@ -32,27 +32,54 @@ export default function LandingProfessional() {
                 width="500px"
                 height="62px"
                 padding="18px 24px"
-                type="primary"
+                type="default"
+                className="dex"
               >
-                DEX Integration
+                <div className="content">
+                  <Image
+                    src={'/icons/common/dex-icon.svg'}
+                    width={24}
+                    height={24}
+                    alt=""
+                  />
+                  DEX Integration
+                </div>
               </Button>
               <Button
                 width="500px"
                 height="62px"
                 margin="10px 0 0 0"
                 padding="18px 24px"
-                type="primary"
+                type="default"
+                className="dex"
               >
-                Market Data Analysis
+                <div className="content">
+                  <Image
+                    src={'/icons/common/market-icon.svg'}
+                    width={24}
+                    height={24}
+                    alt=""
+                  />
+                  Market Data Analysis
+                </div>
               </Button>
               <Button
                 width="500px"
                 height="62px"
                 margin="10px 0 0 0"
                 padding="18px 24px"
-                type="primary"
+                type="default"
+                className="dex"
               >
-                Sniper Monitor
+                <div className="content">
+                  <Image
+                    src={'/icons/common/snipper-icon.svg'}
+                    width={24}
+                    height={24}
+                    alt=""
+                  />
+                  Sniper Monitor
+                </div>
               </Button>
             </div>
           </Col>

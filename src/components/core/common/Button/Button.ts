@@ -19,7 +19,7 @@ export const ButtonCommon = styled(Button)<ButtonPropsStyles>`
   line-height: 1.6;
   transition: all 0.3s;
   height: auto;
-  background-color: rgb(1 193 75/1);
+  background-color: '#060807';
   &::before {
     content: unset;
     display: none;
@@ -48,7 +48,7 @@ export const ButtonCommon = styled(Button)<ButtonPropsStyles>`
   &:not(:disabled):hover {
     border-color: ${({ theme }) => theme?.colors?.buttonActive};
     box-shadow: 0 0 5px 0 ${({ theme }) => theme?.colors?.shadowColor};
-    color: ${(props) => props?.color || props?.theme?.colors?.primaryColor};
+    border: none;
   }
 
   &:active,
@@ -72,7 +72,7 @@ export const ButtonCommon = styled(Button)<ButtonPropsStyles>`
   }
 
   &.ant-btn-ghost {
-    background-color: ${({ theme }) => theme?.colors?.other?.background1};
+    /* background-color: ${({ theme }) => theme?.colors?.other?.background1}; */
     border: 1px solid ${({ theme }) => theme?.colors?.other?.background1};
     padding: 8px 12px;
     gap: 8px;
@@ -143,23 +143,45 @@ export const ButtonCommon = styled(Button)<ButtonPropsStyles>`
 
   &.ant-btn-default {
     position: relative;
+    /* border: 1px solid #ffffff14; */
     border: none;
+    background-image: linear-gradient(80deg, #000 20%, #c6f57a, #e8ffc3);
+    background-size: 200% 200%;
+    background-position: 1% 0;
+    transition-duration: 400ms;
+    color: #fff;
+
+    > div {
+      position: relative;
+      z-index: 2;
+    }
+
+    :hover {
+      box-shadow: 0px 4px 50px 0px #c6f57a66, 0px 0px 12px 0px #ffffff33;
+      background-position: 90% 90%;
+      color: #fff;
+    }
 
     &::before {
+      display: block;
+      position: absolute;
+      content: '';
+      inset: 1px;
+      background-color: #060807;
+      z-index: 1;
+      border-radius: 999px;
+    }
+
+    /* &::before {
       content: '';
       position: absolute;
       inset: 0;
       border-radius: ${({ theme }) => theme?.radius?.normalRadius};
       border: 1px solid transparent;
       background: ${(props) =>
-          props.backgroundColor || props.theme?.colors?.buttonGradient}
+      props.backgroundColor || props.theme?.colors?.buttonGradient}
         border-box;
-      mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-      -webkit-mask: linear-gradient(#fff 0 0) padding-box,
-        linear-gradient(#fff 0 0);
-      -webkit-mask-composite: destination-out;
-      mask-composite: exclude;
-    }
+    } */
 
     span {
       background: ${(props) =>
