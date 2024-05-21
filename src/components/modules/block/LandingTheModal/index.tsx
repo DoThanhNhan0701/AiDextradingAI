@@ -36,7 +36,7 @@ export default function LandingTheModal() {
             <p>Resources</p>
           </div>
           <div className="btn-hide">
-            <Button padding="8px 8px" type="primary">
+            <Button padding="8px 8px" type="default">
               <Image
                 src={'/icons/common/ri_menu-4-fill.svg'}
                 width={16}
@@ -46,8 +46,16 @@ export default function LandingTheModal() {
             </Button>
           </div>
           <div className="header-right">
-            <Button height="40px" padding="9px 20px" type="primary">
-              Get Started
+            <Button height="40px" padding="9px 20px" type="default">
+              <div className="content">
+                Get Started
+                <Image
+                  src={'/icons/common/arrow.svg'}
+                  width={12}
+                  height={12}
+                  alt=""
+                />
+              </div>
             </Button>
             <Button height="40px" padding="13px 20px" type="primary">
               BOT
@@ -56,7 +64,12 @@ export default function LandingTheModal() {
         </div>
         <S.ContentBlock className="open-to-view">
           <div className="grow-on-your">
-            <Button height="36px" padding="7px 16px" type="primary">
+            <Button
+              height="36px"
+              padding="7px 16px"
+              width="201px"
+              type="default"
+            >
               Grow on Your Own Bot
             </Button>
           </div>
@@ -75,7 +88,7 @@ export default function LandingTheModal() {
               width="180px"
               height="48px"
               padding="7px 30px"
-              type="primary"
+              type="default"
             >
               Get Started
             </Button>

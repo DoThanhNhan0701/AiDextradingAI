@@ -35,6 +35,19 @@ export const ContentProfessional = styled.div`
 
     .btn-dex {
       margin-top: 80px;
+
+      .dex > div {
+        width: 100%;
+        font-size: 24px;
+        line-height: 26.4px;
+        font-size: 500;
+      }
+
+      .content {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
     }
 
     .the-all {

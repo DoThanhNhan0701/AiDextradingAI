@@ -50,7 +50,7 @@ const Button = ({
       type={type}
       {...props}
     >
-      {children}
+      <div>{children}</div>
     </S.ButtonCommon>
   );
 };

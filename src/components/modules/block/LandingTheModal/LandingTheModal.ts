@@ -54,6 +54,7 @@ export const Header = styled.div`
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 192.67px;
 
     span {
       font-size: 18px;
@@ -79,6 +80,12 @@ export const Header = styled.div`
   .header-right {
     display: flex;
     gap: 8px;
+
+    .content {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
 
     @media ${(props) => props.theme.breakpoints.mdMax} {
       display: none;
